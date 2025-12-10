@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Name - Blog</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-building"></i> Company Name
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BLOG SECTION -->
+    <section class="section">
+        <h2>Our Blog</h2>
+
+        <div class="blog-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:2rem; margin-top:2rem;">
+
+            <div class="card" style="overflow:hidden;">
+                <img src="assets/images/blog1.jpg" alt="Blog 1" style="width:100%; height:200px; object-fit:cover; border-radius:10px;">
+                <div style="padding:1rem;">
+                    <h3>Latest Trends in Web Development</h3>
+                    <p>Stay ahead with the latest technologies and practices in web development for 2025.</p>
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+
+            <div class="card" style="overflow:hidden;">
+                <img src="assets/images/blog2.jpg" alt="Blog 2" style="width:100%; height:200px; object-fit:cover; border-radius:10px;">
+                <div style="padding:1rem;">
+                    <h3>Digital Marketing Strategies That Work</h3>
+                    <p>Discover effective strategies to boost your online presence and business growth.</p>
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+
+            <div class="card" style="overflow:hidden;">
+                <img src="assets/images/blog3.jpg" alt="Blog 3" style="width:100%; height:200px; object-fit:cover; border-radius:10px;">
+                <div style="padding:1rem;">
+                    <h3>UI/UX Design Tips for Modern Websites</h3>
+                    <p>Learn how to design intuitive and engaging user interfaces for your users.</p>
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+
+            <div class="card" style="overflow:hidden;">
+                <img src="assets/images/blog4.jpg" alt="Blog 4" style="width:100%; height:200px; object-fit:cover; border-radius:10px;">
+                <div style="padding:1rem;">
+                    <h3>Business Consulting Insights for Growth</h3>
+                    <p>Expert advice and strategies to scale your business efficiently and effectively.</p>
+                    <button class="btn">Read More</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <p>© 2025 Company Name — All Rights Reserved</p>
+    </footer>
+
+    <!-- Scroll To Top -->
+    <button id="scrollTop" class="btn" style="display:none; position:fixed; bottom:20px; right:20px;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JS -->
+    <script>
+        // Scroll to Top
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) scrollBtn.style.display = 'block';
+            else scrollBtn.style.display = 'none';
+        });
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

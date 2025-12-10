@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Name - Team</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-building"></i> Company Name
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html" class="active">Team</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- TEAM SECTION -->
+    <section class="section">
+        <h2>Meet Our Team</h2>
+
+        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
+            
+            <!-- Team Member 1 -->
+            <div class="card" style="text-align:center;">
+                <img src="assets/images/team1.jpg" alt="CEO" style="width:150px; border-radius:50%; margin-bottom:1rem;">
+                <h3>Jane Smith</h3>
+                <p>CEO & Founder</p>
+                <div>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="card" style="text-align:center;">
+                <img src="assets/images/team2.jpg" alt="CTO" style="width:150px; border-radius:50%; margin-bottom:1rem;">
+                <h3>John Doe</h3>
+                <p>Chief Technology Officer</p>
+                <div>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="card" style="text-align:center;">
+                <img src="assets/images/team3.jpg" alt="CMO" style="width:150px; border-radius:50%; margin-bottom:1rem;">
+                <h3>Mary Johnson</h3>
+                <p>Chief Marketing Officer</p>
+                <div>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="card" style="text-align:center;">
+                <img src="assets/images/team4.jpg" alt="Lead Designer" style="width:150px; border-radius:50%; margin-bottom:1rem;">
+                <h3>Robert Brown</h3>
+                <p>Lead Designer</p>
+                <div>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <p>© 2025 Company Name — All Rights Reserved</p>
+    </footer>
+
+    <!-- Scroll To Top -->
+    <button id="scrollTop" class="btn" style="display:none; position:fixed; bottom:20px; right:20px;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>

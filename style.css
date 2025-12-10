@@ -1,0 +1,301 @@
+/* ---------------------------------------------
+   GLOBAL THEME + VARIABLES
+--------------------------------------------- */
+:root {
+    --primary: #005bff;
+    --secondary: #ff6b35;
+    --dark: #1a1a1a;
+    --light: #f8f9fa;
+    --text: #333;
+    --shadow: 0 4px 20px rgba(0,0,0,0.1);
+    --radius: 15px;
+    --transition: all 0.3s ease;
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+    --glass-bg: rgba(255,255,255,0.25);
+    --glass-border: rgba(255,255,255,0.4);
+}
+
+/* ---------------------------------------------
+   BASE STYLE
+--------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ---------------------------------------------
+   NAVIGATION BAR
+--------------------------------------------- */
+header {
+    background: var(--gradient);
+    padding: 1rem 0;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: flex;
+    gap: .5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* ---------------------------------------------
+   BUTTONS
+--------------------------------------------- */
+.btn {
+    padding: .9rem 2rem;
+    border-radius: 40px;
+    border: none;
+    background: var(--gradient);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0, 91, 255, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,91,255,0.45);
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--primary);
+}
+
+/* ---------------------------------------------
+   BANNER / HERO SECTION
+--------------------------------------------- */
+.hero {
+    position: relative;
+    height: 80vh;
+    background: url('../images/banner.jpg') center/cover no-repeat;
+    border-radius: var(--radius);
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* ---------------------------------------------
+   SECTIONS
+--------------------------------------------- */
+.section {
+    width: 90%;
+    max-width: 1200px;
+    background: white;
+    margin: 3rem auto;
+    padding: 3rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.section h2 {
+    text-align: center;
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: var(--secondary);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ---------------------------------------------
+   SERVICES CARDS
+--------------------------------------------- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+.card i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* ---------------------------------------------
+   TEAM CARDS
+--------------------------------------------- */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.team-card {
+    background: white;
+    text-align: center;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.team-card:hover {
+    transform: scale(1.05);
+}
+
+.team-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--secondary);
+}
+
+/* ---------------------------------------------
+   PORTFOLIO GALLERY
+--------------------------------------------- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* ---------------------------------------------
+   FOOTER
+--------------------------------------------- */
+footer {
+    background: var(--gradient);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+footer .social a {
+    color: white;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+footer .social a:hover {
+    color: var(--secondary);
+    transform: scale(1.2);
+}
+
+/* ---------------------------------------------
+   RESPONSIVE
+--------------------------------------------- */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    nav ul { flex-wrap: wrap; gap: 1rem; }
+}
